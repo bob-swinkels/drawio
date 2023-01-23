@@ -15,7 +15,7 @@ function mxFreehand(graph)
 	}));
 	
 	//Code inspired by https://stackoverflow.com/questions/40324313/svg-smooth-freehand-drawing
-	var bufferSize = mxFreehand.prototype.NORMAL_SMOOTHING;
+	var bufferSize = mxFreehand.prototype.NO_SMOOTHING;
 	var path = null;
 	var partPathes = [];
 	var strPath;
@@ -32,9 +32,9 @@ function mxFreehand(graph)
 	var selectInserted = false;
 	var perfectFreehandOptions = {
 		size: 5,
-		thinning: 0.5,
-		smoothing: 0.5,
-		streamline: 0.5,
+		thinning: 0,
+		smoothing: 0,
+		streamline: 0,
 	//	easing: (t) => t,
 		start: {
 		  taper: 0,
